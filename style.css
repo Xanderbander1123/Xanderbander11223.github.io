@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Inter,sans-serif;
+    overflow-x:hidden;
+    background:linear-gradient(120deg,#ff00ff,#00ffff,#ff3300,#00ff66,#ffea00);
+    background-size:500% 500%;
+    animation:bgMove 10s infinite alternate;
+    color:white;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    100%{background-position:100% 50%;}
+}
+
+/* navbar */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(20px);
+    background:rgba(0,0,0,0.35);
+    z-index:100;
+}
+
+.logo{
+    font-weight:800;
+}
+
+nav a{
+    color:white;
+    margin-left:18px;
+    cursor:pointer;
+    text-decoration:none;
+    padding:8px 10px;
+    border:1px solid rgba(255,255,255,0.3);
+}
+
+nav a:hover{
+    transform:scale(1.2) rotate(-3deg);
+    background:#ff00ff;
+}
+
+/* profile section (topleft) */
+.top-left{
+    position:fixed;
+    top:15px;
+    left:15px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    z-index:9999;
+    padding:8px 12px;
+    background:rgba(0,0,0,0.35);
+    border:1px solid rgba(255,255,255,0.3);
+    backdrop-filter:blur(10px);
+}
+
+.top-profile{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid white;
+}
+
+.top-text{
+    font-size:14px;
+    font-weight:700;
+}
+
+/* pages */
+section{
+    min-height:100vh;
+    padding:140px 8%;
+    display:none;
+}
+
+.page.active{
+    display:block;
+}
+
+/* hero */
+.hero h2{
+    font-size:90px;
+    line-height:0.9;
+    font-weight:800;
+
+    background: linear-gradient(
+        90deg,
+        #ff00ff,
+        #00ffff,
+        #ffea00,
+        #ff3300,
+        #00ff66
+    );
+
+    background-size:300% 300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation: rainbowShift 4s infinite linear;
+
+    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+@keyframes rainbowShift{
+    0%{background-position:0% 50%;}
+    100%{background-position:100% 50%;}
+}
+
+/* main profile */
+.profile{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:url('logo(1).png');
+    background-size:cover;
+    background-position:center;
+    border:4px solid white;
+}
+
+/* buttons */
+button{
+    margin-top:20px;
+    padding:12px 22px;
+    border:2px solid white;
+    background:black;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.3) rotate(5deg);
+    background:#00ffff;
+    color:black;
+}
+
+/* grid */
+.grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    max-width:800px;
+    margin:40px auto;
+    padding:30px;
+
+    background:rgba(0,0,0,0.35);
+    border:1px solid rgba(255,255,255,0.2);
+    backdrop-filter:blur(10px);
+
+    line-height:1.6;
+    font-size:18px;
+    text-align:left;
+}
+
+/* slideshow */
+#slideshow.page.active{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+/* slideshow container */
+.slideshow{
+    position:relative;
+
+    width:85%;
+    max-width:1200px;
+
+    height:85vh;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:20px auto;
+}
+
+/* slides */
+.slide{
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:40px;
+}
+
+/* active slide */
+.slide.active{
+    display:flex;
+}
+
+/* images */
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+/* controls */
+.controls{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    margin-top:20px;
+}
+
+/* counter */
+#slideCounter{
+    margin-top:15px;
+    font-size:28px;
+    font-weight:700;
+}
+
+.site-name{
+    font-size:22px;
+    font-weight:800;
+    margin-right:20px;
+
+    background:linear-gradient(90deg,#ff00ff,#00ffff,#ffea00);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    letter-spacing:2px;
+}
+
+.video-container{
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:70px;
+
+    margin-top:30px;
+}
+
+.video-block{
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+}
+
+.video-text{
+    margin-top:25px;
+
+    text-align:center;
+
+    font-size:25px;
+
+    line-height:1.7;
+
+    width:100%;
+}
+
+.page h1{
+    text-align:center;
+    width:100%;
+    font-size:60px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.4),
+        0 0 20px #ff00ff,
+        0 0 40px #00ffff;
+
+    margin-bottom:30px;
+}
+
+/* PHOTO GRID */
+.grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+}
+
+/* PHOTO BOX */
+.photo-card{
+    overflow:hidden;
+
+    border-radius:20px;
+
+    background:rgba(0,0,0,0.3);
+
+    border:2px solid rgba(255,255,255,0.2);
+
+    backdrop-filter:blur(10px);
+
+    transition:0.4s;
+}
+
+/* IMAGE */
+.photo-card img{
+    width:100%;
+    height:350px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:0.5s;
+}
+
+/* HOVER EFFECT */
+.photo-card:hover{
+    transform:scale(1.03) rotate(1deg);
+
+    border-color:white;
+
+    box-shadow:
+        0 0 25px rgba(255,255,255,0.3);
+}
+
+.photo-card:hover img{
+    transform:scale(1.08);
+}
+
+/* FULLSCREEN VIEWER */
+.image-viewer{
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    background:rgba(0,0,0,0.9);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+
+    backdrop-filter:blur(10px);
+}
+
+/* SHOW VIEWER */
+.image-viewer.active{
+    display:flex;
+}
+
+/* FULL IMAGE */
+.image-viewer img{
+    max-width:90%;
+    max-height:90vh;
+
+    object-fit:contain;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 0 40px rgba(255,255,255,0.3);
+}
+
+/* CLICKABLE IMAGES */
+.photo-card img{
+    cursor:pointer;
+}
+
+/* idc if its not organized, it'll work */

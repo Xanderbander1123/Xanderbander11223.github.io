@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alexander William Graham</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+
+<div class="site-name">Alexander William Graham</div>
+
+<div class="nav-links">
+<a onclick="show('home')">Home</a>
+<a onclick="show('bio')">Biography</a>
+<a onclick="show('slideshow')">Slideshow</a>
+<a onclick="show('video')">Video</a>
+<a onclick="show('photos')">Photos</a>
+</div>
+
+</nav>
+
+<section id="home" class="hero page active">
+<img src="profile.png"class="profile">
+<h2>Professional<br>Glue<br>Sniffer</h2>
+<br>
+<p style="font-size: 25px;">Welcome to my website, made with html, css, and javascript.</p>
+<p style="font-size: 20px;">5/14/2026</p>
+<br>
+<button onclick="show('bio')">ENTER SITE</button>
+</section>
+
+<section id="bio" class="page">
+<h1 style="font-size: 60px;">Biography</h1>
+<br>
+<br>
+<div class="card">
+
+I was born in Nelson, New Zealand, on November 5th, 2008, and I’ve spent most of my life surrounded by technology and computers. Throughout my life I’ve also had the opportunity to travel to different parts of the world, including China, the United Kingdom, Canada, Abu Dhabi, and Egypt. Being exposed to different places, people, and cultures has influenced a lot of my interests and has helped shape the way I approach creativity and problem solving.
+
+<br><br>
+
+A large part of my interest in technology came from gaming and spending time online. I use Steam frequently and enjoy games such as Half-Life 2, Team Fortress 2, MISERY, DayZ, Destiny 2, and Rust. Over time, this interest developed into learning programming languages including HTML, CSS, JavaScript, and Python. I enjoy creating projects that combine both creativity and technical skills, particularly websites and games. I am currently developing a DOOM-style shooter for my Computer Science CCT, which has allowed me to further develop my understanding of programming, design, and game mechanics.
+
+
+<br><br>
+
+Outside of coding, I enjoy hobbies that involve both creativity and practical skills, including woodworking, metalworking, and photography. I enjoy the process of designing and creating things, whether digitally through code or physically through materials and tools. These interests have helped me develop patience, problem-solving skills, and creativity, all of which continue to influence the projects I create today.
+
+</div>
+</div>
+</section>
+
+<section id="slideshow" class="page">
+<h1 style="font-size: 60px;">Slideshow</h1>
+<br>
+<h2 style="font-size: 35px;">You can also use arrow keys with the slideshow</h2>
+
+<div class="slideshow">
+
+    <div class="slide active"><img src="slide1.png"></div>
+    <div class="slide"><img src="slide2.png"></div>
+    <div class="slide"><img src="slide3.png"></div>
+    <div class="slide"><img src="slide4.png"></div>
+    <div class="slide"><img src="slide5.png"></div>
+    <div class="slide"><img src="slide6.png"></div>
+    <div class="slide"><img src="slide7.png"></div>
+    <div class="slide"><img src="slide8.png"></div>
+    <div class="slide"><img src="slide9.png"></div>
+    <div class="slide"><img src="slide10.png"></div>
+
+</div>
+
+<div class="controls">
+    <button onclick="prev()">Prev</button>
+    <button onclick="next()">Next</button>
+</div>
+<br>
+<p id="slideCounter"></p>
+
+</section>
+
+<section id="video" class="page">
+
+<h1>Video Introduction</h1>
+
+<div class="video-container">
+
+    <!-- first video -->
+    <div class="video-block">
+
+        <video width="1000" controls>
+            <source src="video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- text under first video -->
+        <div class="video-text">
+
+            This video features my friend and me while I was streaming Half-Life 2: Episode Two.
+
+            <br><br>
+
+            4 February 2024
+
+        </div>
+
+    </div>
+
+    <!-- second video -->
+    <div class="video-block">
+
+        <video width="1000" controls>
+            <source src="video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- text under second video -->
+        <div class="video-text">
+
+            This is just a video of me playing Team Fortress 2 while being in a call with some of my friends.
+
+            <br><br>
+
+            3 May 2026
+    </div>
+
+</div>
+
+</section>
+
+<section id="photos" class="page">
+
+<h1>Photo Samples</h1>
+
+<div class="grid">
+
+    <div class="photo-card">
+        <img src="img1.jpg" onclick="openImage(this.src)">
+    </div>
+
+    <div class="photo-card">
+        <img src="img2.jpg" onclick="openImage(this.src)">
+    </div>
+
+    <div class="photo-card">
+        <img src="img3.png" onclick="openImage(this.src)">
+    </div>
+
+    <div class="photo-card">
+        <img src="img4.jpg" onclick="openImage(this.src)">
+    </div>
+
+    <div class="photo-card">
+        <img src="img5.jpg" onclick="openImage(this.src)">
+    </div>
+
+    <div class="photo-card">
+        <img src="img6.jpg" onclick="openImage(this.src)">
+    </div>
+
+    <div class="photo-card">
+        <img src="img7.jpg" onclick="openImage(this.src)">
+    </div>
+
+    <div class="photo-card">
+        <img src="img8.jpg" onclick="openImage(this.src)">
+    </div>
+
+    <div class="photo-card">
+        <img src="img9.jpg" onclick="openImage(this.src)">
+    </div>
+
+</div>
+
+<!-- FULLSCREEN IMAGE -->
+<div id="imageViewer" class="image-viewer" onclick="closeImage()">
+
+    <img id="viewerImg">
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+<!-- im not organizing anything and it'll work -->
